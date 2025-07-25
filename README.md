@@ -30,7 +30,7 @@ Xampp (php)
 
 1. Clone the Repository:
 
-git clone https://github.com/yourusername/Smartshop-management-system.git
+git clone https://github.com/SoumyadipSamanta/SMART-SHOP-MANAGET-SYSTEM
 
 ✅ Future Enhancements
 Admin Panel
