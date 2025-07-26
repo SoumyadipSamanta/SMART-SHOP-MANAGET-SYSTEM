@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Shop - Payment</title>
+  <style>
+    body { font-family: Arial; padding: 30px; background: #818a08; }
+    table { width: 100%; border-collapse: collapse; background: rgb(71, 197, 12); margin-bottom: 20px; }
+    th, td { padding: 12px; border: 1px solid #14d32d; text-align: center; }
+    th { background-color: #28a745; color: rgb(13, 111, 168); }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: rgb(172, 24, 24);
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧾 Your Bill</h1>
+  <table id="cartTable"></table>
+  <button onclick="pay()">💳 Pay Now</button>
+
+  <script>
+    fetch('/api/cart')
+      .then(res => res.json())
+      .then(data => {
+        const table = document.getElementById('cartTable');
+        let total = 0;
+        table.innerHTML = `
+          <tr><th>Product</th><th>Price</th><th>Qty</th><th>Subtotal</th></tr>
+        `;
+        data.forEach(item => {
+          const subtotal = item.price * item.quantity;
+          total += subtotal;
+          table.innerHTML += `
+            <tr>
+              <td>${item.product}</td>
+              <td>₹${item.price}</td>
+              <td>${item.quantity}</td>
+              <td>₹${subtotal.toFixed(2)}</td>
+            </tr>
+          `;
+        });
+        table.innerHTML += `
+          <tr><td colspan="3"><strong>Total</strong></td><td><strong>₹${total.toFixed(2)}</strong></td></tr>
+        `;
+      });
+
+    function pay() {
+      fetch('/api/cart/clear', { method: 'POST' })
+        .then(() => {
+          alert('✅ Payment Successful!');
+          window.location.href = 'index.html';
+        });
+    }
+  </script>
+</body>
+</html>

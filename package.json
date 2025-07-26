@@ -1,0 +1,18 @@
+{
+  "name": "smart-shop",
+  "version": "1.0.0",
+  "description": "Smart Shop Management System is a web-based application designed to help retail shops manage inventory, billing, and sales efficiently. It offers real-time stock tracking, barcode-based billing, and user-friendly dashboards to streamline daily operations 🏥 SmartShop Management System (SSMS) The Smart Shop Management System (SSMS) is a comprehensive, user-friendly, and automated software solution designed to streamline and simplify the daily operations of retail shops, supermarkets, and small businesses. This system enhances efficiency, reduces manual errors, and improves customer service by integrating core business functionalities into a single digital platform.Built with modern technologies to ensure real-time data handling, security, and user-friendly interactions. ✨ Key Features – Smart Shop Management System (SSMS) •  Secure Authentication & Authorization – Role-based access (Admin, Cashier, Inventory Manager) using JWT for secure sessions. • Admin Dashboard – Manage products, users, suppliers, sales reports, and system settings from a central panel. •  Smart Billing System – Fast and efficient invoice generation with auto tax, discount, and barcode scanning support. • Inventory Management – Real-time stock tracking, alerts for low stock, and supplier-wise purchase entries. Modern UI/UX – Built using CSS and Framer Motion for sleek animations and responsive design. 🛠️ Tech Stack Frontend: HTML5,CSS,JAVASCRIPT Backend: PHP Tools: VS Code Xampp  GitHub 📂 Project Structure",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.5"
+  }
+}
